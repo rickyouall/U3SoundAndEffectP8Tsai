@@ -122,6 +122,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &92984528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 92984530}
+  - component: {fileID: 92984529}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &92984529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92984528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f97da1f59751a429933f9e59db92e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+--- !u!4 &92984530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92984528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.82903, y: -8.332607, z: 10.4382105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +404,9 @@ MonoBehaviour:
   gravityModifier: 1.7
   isOnGround: 1
   gameOver: 0
+  doubleJump: 0
+  doubleJumpForce: 500
+  doubleSpeed: 0
 --- !u!65 &471594245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -613,13 +661,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f97e33b40431c064b8d135484fbd4b19, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.521
-  m_Pitch: 1.01
+  m_Volume: 0.629
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 109
+  Priority: 121
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -929,7 +977,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7416108f12578341a30693ed74b5fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 1625162844617658862, guid: d904340a4132c5a48ba49ef08727ea1b, type: 3}
+  obstaclePrefab:
+  - {fileID: 1625162844617658862, guid: d904340a4132c5a48ba49ef08727ea1b, type: 3}
+  - {fileID: 2007431710605697968, guid: 19905e1abe4a3fc44855349e45d00c00, type: 3}
+  - {fileID: 4639959131916150882, guid: 0ceec8b3fcf85d0458a2e4e09ad40126, type: 3}
+  - {fileID: 4239694806846366299, guid: 380577ef357e2014eab0247d1f62806e, type: 3}
 --- !u!4 &1109452015
 Transform:
   m_ObjectHideFlags: 0
@@ -1132,3 +1184,4 @@ SceneRoots:
   - {fileID: 739620979}
   - {fileID: 269366315}
   - {fileID: 1109452015}
+  - {fileID: 92984530}

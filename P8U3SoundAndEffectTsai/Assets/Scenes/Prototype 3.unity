@@ -400,8 +400,8 @@ MonoBehaviour:
   dirtParticle: {fileID: 360572596}
   jumpSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   crashSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
-  jumpForce: 500
-  gravityModifier: 1.7
+  jumpForce: 515
+  gravityModifier: 1.86
   isOnGround: 1
   gameOver: 0
   doubleJump: 0
@@ -661,13 +661,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f97e33b40431c064b8d135484fbd4b19, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.629
+  m_Volume: 0.458
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 121
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -916,7 +916,7 @@ Transform:
   m_GameObject: {fileID: 835818919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.05, y: 9, z: 4}
+  m_LocalPosition: {x: 49.05, y: 9.5, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

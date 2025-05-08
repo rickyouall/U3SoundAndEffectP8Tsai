@@ -10,15 +10,15 @@ public class PlayerControllerX : MonoBehaviour
     private float gravityModifier= 1.5f;
     private Rigidbody playerRb;
         
-    
-
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
 
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
-
+    public AudioClip BoingSound;
+    private float topBound = 14;
+    private float groundBound = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class PlayerControllerX : MonoBehaviour
         playerAudio = GetComponent<AudioSource>();
 
         // Apply a small upward force at the start of the game
-        playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        playerRb.AddForce(Vector3.up * 2, ForceMode.Impulse);
 
     }
 
@@ -40,6 +40,20 @@ public class PlayerControllerX : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
         }
+
+        if(transform.position.y > topBound)
+        {
+            playerRb.AddForce(Vector3.up * -0.1f, ForceMode.Impulse);
+        }
+
+         else if (transform.position.y < groundBound &&!gameOver)
+        {
+            playerRb.AddForce(Vector3.up * 0.4f, ForceMode.Impulse);
+            playerAudio.PlayOneShot(BoingSound, 1.0f);
+        }
+
+
+
     }
 
     private void OnCollisionEnter(Collision other)
